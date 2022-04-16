@@ -29,7 +29,7 @@ export class Person implements Introduce {
   }
 
   public refuse(): void {
-    console.log(`${this.name}: No, fuck you! I'm not a homosexual person`);
+    console.log(`${this.name}: No, fuck you! I'm not a gay!`);
   }
 
   public soSorry(): void {
