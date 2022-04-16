@@ -1,0 +1,5 @@
+<app-item
+  *ngFor="let item of items"
+  [data]="item"
+  (changeVisibility)="notify($event)"
+></app-item>

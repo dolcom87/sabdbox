@@ -1,0 +1,17 @@
+<h2>
+  item component #{{ data?.id }}
+  <small>
+    (<label>
+      Show content
+      <input
+        type="checkbox"
+        [checked]="data?.isVisible"
+        (change)="onChange()"
+      />
+    </label>
+    )
+  </small>
+</h2>
+<div *ngIf="data?.isVisible">
+  {{ data?.content }}
+</div>
