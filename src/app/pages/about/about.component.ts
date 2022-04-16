@@ -3,6 +3,7 @@ import { ItemModel } from '../../classes/item-model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Man } from '../../classes/man';
 import { Woman } from '../../classes/woman';
+import { FunctionalService } from '../../services/functional.service';
 
 @Component({
   selector: 'app-about',
@@ -18,29 +19,19 @@ export class AboutComponent implements OnInit {
     { id: 5, content: 'content of item 5', isVisible: true },
   ];
 
-  constructor(private snackbar: MatSnackBar) {}
+  constructor(
+    private snackbar: MatSnackBar,
+    private functional: FunctionalService
+  ) {}
 
   ngOnInit(): void {
     const sam = new Man('Sam', 30);
     const samantha = new Woman('Samantha', 27);
-
-    sam.greet();
-    samantha.greet(sam);
-    sam.offerToGetSexWith(samantha);
-    samantha.agree();
-    sam.getSexWith(samantha);
-
-    console.log('');
     const erik = new Man('Erik', 25);
 
-    erik.greet();
-    sam.greet(erik);
-    erik.offerToGetSexWith(sam);
-    sam.refuse();
-    erik.soSorry();
-    sam.noItsNotSorry();
-
-    console.log('');
+    this.functional.getPeopleIntoConversation(sam, samantha);
+    this.functional.getPeopleIntoConversation(erik, samantha);
+    this.functional.getPeopleIntoConversation(erik, sam);
   }
 
   public notify(event: string): void {
