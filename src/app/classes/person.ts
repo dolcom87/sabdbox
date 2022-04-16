@@ -11,9 +11,10 @@ export class Person implements Introduce {
     this.age = age;
   }
 
-  public greet(): void {
+  public greet(person?: Person): void {
+    const personName = person ? `, ${person.name}` : '';
     console.log(
-      `${this.name}: Hello! I'm ${this.name} and I'm ${this.age} years old`
+      `${this.name}: Hello${personName}! I'm ${this.name} and I'm ${this.age} years old`
     );
   }
 
@@ -40,7 +41,7 @@ export class Person implements Introduce {
   }
 
   public getSexWith(person: Person): void {
-    console.log(`${person.name}: ah-ah! oh-oh!`);
     console.log(`${this.name}: Aww yeah!`);
+    console.log(`${person.name}: ah-ah! oh-oh!`);
   }
 }

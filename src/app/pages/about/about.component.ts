@@ -25,7 +25,7 @@ export class AboutComponent implements OnInit {
     const samantha = new Woman('Samantha', 27);
 
     sam.greet();
-    samantha.greet();
+    samantha.greet(sam);
     sam.offerToGetIntoSexWith(samantha);
     samantha.agree();
     sam.getSexWith(samantha);
@@ -34,7 +34,7 @@ export class AboutComponent implements OnInit {
     const erik = new Man('Eric', 25);
 
     erik.greet();
-    sam.greet();
+    sam.greet(erik);
     erik.offerToGetIntoSexWith(sam);
     sam.refuse();
     erik.soSorry();
