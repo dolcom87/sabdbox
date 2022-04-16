@@ -9,10 +9,23 @@ import {
   MatSnackBar,
 } from '@angular/material/snack-bar';
 import { Overlay } from '@angular/cdk/overlay';
+import { NgbDatepickerModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './pages/about/about.component';
+import { RouterModule } from '@angular/router';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
-  declarations: [AppComponent, ItemComponent],
-  imports: [BrowserModule, BrowserAnimationsModule],
+  declarations: [AppComponent, ItemComponent, AboutComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    NgbModule,
+    NgbDatepickerModule,
+    AppRoutingModule,
+    RouterModule,
+    MatButtonToggleModule,
+  ],
   providers: [
     MatSnackBar,
     Overlay,

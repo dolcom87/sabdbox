@@ -1,9 +1,7 @@
 <div class="container">
   <h1>App component</h1>
-</div>
 
-<app-item
-  *ngFor="let item of items"
-  [data]="item"
-  (changeVisibility)="notify($event)"
-></app-item>
+  <a [routerLink]="'about'">about</a>
+
+  <router-outlet></router-outlet>
+</div>
