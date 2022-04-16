@@ -26,16 +26,16 @@ export class AboutComponent implements OnInit {
 
     sam.greet();
     samantha.greet(sam);
-    sam.offerToGetIntoSexWith(samantha);
+    sam.offerToGetSexWith(samantha);
     samantha.agree();
     sam.getSexWith(samantha);
 
     console.log('');
-    const erik = new Man('Eric', 25);
+    const erik = new Man('Erik', 25);
 
     erik.greet();
     sam.greet(erik);
-    erik.offerToGetIntoSexWith(sam);
+    erik.offerToGetSexWith(sam);
     sam.refuse();
     erik.soSorry();
     sam.noItsNotSorry();

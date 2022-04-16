@@ -18,7 +18,7 @@ export class Person implements Introduce {
     );
   }
 
-  public offerToGetIntoSexWith(person: Person): void {
+  public offerToGetSexWith(person: Person): void {
     console.log(
       `${this.name}: Hey ${person.name}, how about having sex with me?`
     );
