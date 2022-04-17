@@ -7,12 +7,16 @@ import { Person } from '../classes/person';
 export class FunctionalService {
   constructor() {}
 
-  public getPeopleIntoConversation(person: Person, person2: Person): void {
+  public getPeopleIntoConversation(
+    person: Person,
+    person2: Person,
+    agree: boolean
+  ): void {
     person.greet();
     person2.greet(person);
     person.offerToGetSexWith(person2);
 
-    if (person.gender !== person2.gender) {
+    if (agree) {
       person2.agree();
       person.getSexWith(person2);
     } else {

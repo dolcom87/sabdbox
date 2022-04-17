@@ -6,4 +6,8 @@ export class Man extends Person {
     super(name, age);
     this.gender = Gender.man;
   }
+
+  override refuse() {
+    this.say(`No, fuck you!`);
+  }
 }

@@ -29,9 +29,9 @@ export class AboutComponent implements OnInit {
     const samantha = new Woman('Samantha', 27);
     const erik = new Man('Erik', 25);
 
-    this.functional.getPeopleIntoConversation(sam, samantha);
-    this.functional.getPeopleIntoConversation(erik, samantha);
-    this.functional.getPeopleIntoConversation(erik, sam);
+    this.functional.getPeopleIntoConversation(sam, samantha, true);
+    this.functional.getPeopleIntoConversation(erik, samantha, false);
+    this.functional.getPeopleIntoConversation(erik, sam, false);
   }
 
   public notify(event: string): void {

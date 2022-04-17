@@ -1,3 +1,5 @@
+import { Person } from '../classes/person';
+
 export interface Introduce {
-  greet(): void;
+  greet(person?: Person): void;
 }
